@@ -2143,7 +2143,7 @@ main,
 }
 
 .work-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(40px, 5vw, 72px) 22px;
   margin-top: 28px;
 }
@@ -2156,20 +2156,20 @@ main,
   --project-accent: #bedf67;
 }
 
+.work-card[data-category="game"] {
+  --project-accent: #bedf67;
+}
+
 .work-card[data-category="zbrush"] {
   --project-accent: #c99b9c;
 }
 
-.work-card[data-category="animation"] {
+.work-card[data-category="character"] {
+  --project-accent: #d7a572;
+}
+
+.work-card[data-category="personal"] {
   --project-accent: #94cdb5;
-}
-
-.work-card[data-category="level"] {
-  --project-accent: #e98a70;
-}
-
-.work-card[data-category="engine"] {
-  --project-accent: #b6a8d9;
 }
 
 .work-open {
@@ -2598,6 +2598,36 @@ main,
   background: rgba(255, 255, 255, 0.025);
 }
 
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 38px;
+}
+
+.case-study-card {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.case-study-card h3 {
+  margin: 0 0 11px;
+  color: rgba(190, 223, 103, 0.78);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.case-study-card p {
+  margin: 0;
+  color: rgba(223, 229, 219, 0.62);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
 .dialog-media {
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -2906,6 +2936,10 @@ main,
   .project-dialog {
     width: calc(100vw - 16px);
     border-radius: 21px;
+  }
+
+  .case-study-grid {
+    grid-template-columns: 1fr;
   }
 }
 

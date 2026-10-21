@@ -40,7 +40,7 @@ window.PORTFOLIO = {
       zh: "风格化 3D 角色作品",
       en: "Stylized 3D character artwork",
     },
-    heroWorkId: "signal-off",
+    heroWorkId: "rollout",
     facts: [
       {
         label: { zh: "主要方向", en: "FOCUS" },
@@ -87,8 +87,8 @@ window.PORTFOLIO = {
       eyebrow: { zh: "作品总览 / 01", en: "PROJECT INDEX / 01" },
       title: { zh: "作品总览", en: "Project Index" },
       intro: {
-        zh: "先浏览项目全貌，再进入任一作品查看制作过程、图片与视频。",
-        en: "Scan the complete body of work, then open any project for its process, images and videos.",
+        zh: "合作游戏、角色概念与个人美术创作。先浏览作品全貌，再进入项目查看完整制作说明。",
+        en: "Co-op game production, character concepts and personal artwork. Scan the overview, then open a project for the full breakdown.",
       },
       all: { zh: "全部", en: "All" },
       viewProject: { zh: "查看项目", en: "View Project" },
@@ -97,11 +97,10 @@ window.PORTFOLIO = {
       count: { zh: "个项目", en: "projects" },
     },
     categories: {
+      game: { zh: "游戏项目", en: "Game Project" },
       character: { zh: "角色设计", en: "Character Art" },
       zbrush: { zh: "ZBrush", en: "ZBrush" },
-      animation: { zh: "绑定动画", en: "Rigging & Animation" },
-      level: { zh: "关卡设计", en: "Level Design" },
-      engine: { zh: "引擎呈现", en: "In-Engine" },
+      personal: { zh: "个人美术创作", en: "Personal Artwork" },
     },
     capabilities: {
       eyebrow: { zh: "能力范围 / 02", en: "CAPABILITIES / 02" },
@@ -155,35 +154,78 @@ window.PORTFOLIO = {
    */
   works: [
     {
-      id: "signal-off",
-      title: "SIGNAL // OFF",
-      category: "character",
+      id: "rollout",
+      title: "ROLLOUT",
+      category: "game",
       year: "2026",
       layout: "wide",
       featured: true,
-      cover: "./pictures/web/4.jpg",
+      cover: "./pictures/web/5.jpg",
       subtitle: {
-        zh: "风格化角色与视觉开发",
-        en: "Stylized Character & Visual Development",
+        zh: "双人骑车合作游戏 / 低多边形视觉",
+        en: "Co-op Bike Game / Low-Poly Visuals",
       },
       roles: {
-        zh: ["角色造型", "材质与渲染", "视觉开发"],
-        en: ["Character design", "Materials & rendering", "Visual development"],
+        zh: ["整体美术风格", "角色建模", "绑定与动画", "关卡地编", "材质制作"],
+        en: ["Art direction", "Character modeling", "Rigging & animation", "Level art", "Materials"],
       },
       description: {
-        zh: "围绕眩晕与失真感完成风格化角色造型、高饱和材质、灯光与引擎内视觉呈现。",
-        en: "A stylized character project exploring distortion, saturated materials, lighting and in-engine presentation.",
+        zh: "双人合作骑车游戏，以《Jet Set Radio》为视觉灵感，用低面数造型、高饱和色彩与涂鸦式界面还原千禧年前后的复古游戏氛围；整体美术风格由我负责敲定。",
+        en: "A two-player co-op bike game inspired by Jet Set Radio, using low-poly forms, saturated color and graphic UI to evoke early-2000s game culture. I also defined the project's overall art direction.",
       },
+      caseStudy: [
+        {
+          label: { zh: "项目概念与设定", en: "CONCEPT" },
+          text: {
+            zh: "这是一个双人合作的骑车游戏。美术灵感来自《Jet Set Radio》，希望还原 PS3 时期的复古千禧年氛围，并采用低面数和强图形化的视觉风格。",
+            en: "A two-player co-op bike game inspired by Jet Set Radio. The visual direction combines low-poly modeling, bold graphic shapes and a retro millennium atmosphere associated with the PS3 era.",
+          },
+        },
+        {
+          label: { zh: "个人负责内容", en: "MY ROLE" },
+          text: {
+            zh: "项目的整体美术风格由我负责敲定，并负责角色建模、绑定、动画和地编，同时参与材质制作。除 UI 以外的美术内容大部分由我完成，因此也负责把控整个项目的美术流程与落地。",
+            en: "I defined the project's overall art direction and handled character modeling, rigging, animation and level art, while also contributing to materials. I was the sole artist outside of UI, which meant owning most of the visual pipeline from asset creation to in-engine implementation.",
+          },
+        },
+        {
+          label: { zh: "制作流程与工具", en: "PIPELINE" },
+          text: {
+            zh: "通常在 Maya 或 Blender 中建立模型；需要时进入 ZBrush 雕刻，并根据情况在 ZBrush 或手动拓扑；随后在 RizomUV 中拆分 UV，在 Substance Painter 中制作贴图；有特殊材质需求时，再到 Unreal Engine 中制作材质球。",
+            en: "Modeling starts in Maya or Blender, followed by optional ZBrush sculpting and either ZBrush or manual retopology. UVs are prepared in RizomUV and textures are created in Substance Painter; specialized materials are developed in Unreal Engine.",
+          },
+        },
+        {
+          label: { zh: "成果与收获", en: "OUTCOME" },
+          text: {
+            zh: "最终游戏流程约 20 分钟，共三关，约三分之二的测试玩家能够通关，游玩过程反馈积极。这是我第一次较完整地参与游戏制作，让我理解了完整开发流程，尤其是美术生产与引擎落地之间的衔接。",
+            en: "The finished game runs for roughly 20 minutes across three levels, with about two-thirds of playtesters completing it and positive feedback during play. It was my first substantial game-production experience and clarified the complete pipeline, especially how art production connects to implementation in the engine.",
+          },
+        },
+      ],
       images: [
+        "./pictures/web/5.jpg",
+        "./pictures/web/6.jpg",
         "./pictures/web/4.jpg",
+        "./pictures/web/1.jpg",
         "./pictures/web/2.jpg",
         "./pictures/web/3.jpg",
+        "./pictures/web/ue材质球.jpg",
+        "./pictures/web/HighresScreenshot00000.jpg",
+        "./pictures/web/HighresScreenshot00001.jpg",
+        "./pictures/web/HighresScreenshot00002.jpg",
+        "./pictures/web/HighresScreenshot00004.jpg",
+        "./pictures/web/HighresScreenshot00005.jpg",
+        "./pictures/web/HighresScreenshot00006.jpg",
+        "./pictures/web/ScreenShot00000.jpg",
         "./pictures/previews/binding-01.gif",
         "./pictures/previews/binding-02.gif",
       ],
       videos: [
-        { src: "./pictures/绑定+动画.mp4", label: { zh: "角色动作与绑定测试 01", en: "Character Rig & Motion Test 01" } },
-        { src: "./pictures/绑定+动画2.mp4", label: { zh: "角色动作与绑定测试 02", en: "Character Rig & Motion Test 02" } },
+        { src: "./pictures/绑定+动画.mp4", label: { zh: "角色绑定与动画测试 01", en: "Character Rig & Animation Test 01" } },
+        { src: "./pictures/绑定+动画2.mp4", label: { zh: "角色绑定与动画测试 02", en: "Character Rig & Animation Test 02" } },
+        { src: "./pictures/游戏画面.mp4", label: { zh: "街区骑行实机片段", en: "City Bike Gameplay" } },
+        { src: "./pictures/level2.mp4", label: { zh: "室内关卡实机片段", en: "Interior Level Gameplay" } },
       ],
     },
     {
@@ -216,6 +258,7 @@ window.PORTFOLIO = {
       category: "character",
       year: "2026",
       layout: "standard",
+      featured: true,
       cover: "./pictures/web/officer-cover.jpg",
       subtitle: { zh: "风格化角色概念设计", en: "Stylized Character Concept" },
       roles: {
@@ -230,37 +273,11 @@ window.PORTFOLIO = {
       videos: [],
     },
     {
-      id: "rig-motion-01",
-      title: "RIG & MOTION",
-      category: "animation",
-      year: "2026",
-      layout: "standard",
-      cover: "./pictures/previews/binding-01.gif",
-      subtitle: { zh: "角色骨骼与动作验证", en: "Character Rig & Motion Validation" },
-      roles: {
-        zh: ["骨骼绑定", "控制器整理", "动作与镜头测试"],
-        en: ["Rigging", "Controller setup", "Motion & camera testing"],
-      },
-      description: {
-        zh: "在 Maya 中完成角色骨骼、控制器与动作验证，通过两段测试检查肢体姿态和镜头中的动作表现。",
-        en: "Maya-based character rigging and controller setup, validated through two motion tests for posing and on-camera performance.",
-      },
-      images: [
-        "./pictures/web/1.jpg",
-        "./pictures/previews/binding-01.gif",
-        "./pictures/previews/binding-02.gif",
-      ],
-      videos: [
-        { src: "./pictures/绑定+动画.mp4", label: { zh: "骨骼与动作测试 01", en: "Rig & Motion Test 01" } },
-        { src: "./pictures/绑定+动画2.mp4", label: { zh: "骨骼与动作测试 02", en: "Rig & Motion Test 02" } },
-      ],
-    },
-    {
       id: "surreal-room",
       title: "SURREAL ROOM",
-      category: "level",
+      category: "personal",
       year: "2025",
-      layout: "wide",
+      layout: "standard",
       featured: true,
       cover: "./pictures/web/surreal-room.jpg",
       subtitle: { zh: "超现实室内场景与循环动画", en: "Surreal Interior & Loop Animation" },
@@ -279,56 +296,6 @@ window.PORTFOLIO = {
       videos: [
         { src: "./pictures/003_ntsc_1.mp4", label: { zh: "超现实场景循环动画", en: "Surreal Scene Loop Animation" } },
       ],
-    },
-    {
-      id: "city-block",
-      title: "VISTA CITY BLOCK",
-      category: "level",
-      year: "2026",
-      layout: "wide",
-      featured: true,
-      cover: "./pictures/web/HighresScreenshot00002.jpg",
-      subtitle: { zh: "多层街区与室内空间", en: "Multi-Level City Block & Interior" },
-      roles: {
-        zh: ["场景搭建", "灯光氛围", "玩家动线", "引擎内验证"],
-        en: ["Environment build", "Lighting & mood", "Player flow", "In-engine validation"],
-      },
-      description: {
-        zh: "在 Unreal Engine 中搭建多层城市街区与室内空间，通过地标、街巷高差和灯光颜色组织玩家路径与探索节奏。",
-        en: "A multi-level city block and interior set built in Unreal Engine, using landmarks, elevation changes and color-coded lighting to guide the player.",
-      },
-      images: [
-        "./pictures/web/HighresScreenshot00000.jpg",
-        "./pictures/web/HighresScreenshot00001.jpg",
-        "./pictures/web/HighresScreenshot00002.jpg",
-        "./pictures/web/HighresScreenshot00004.jpg",
-        "./pictures/web/HighresScreenshot00005.jpg",
-        "./pictures/web/HighresScreenshot00006.jpg",
-        "./pictures/web/ScreenShot00000.jpg",
-      ],
-      videos: [
-        { src: "./pictures/游戏画面.mp4", label: { zh: "街区探索实机片段", en: "City Block Gameplay" } },
-        { src: "./pictures/level2.mp4", label: { zh: "室内关卡实机片段", en: "Interior Level Gameplay" } },
-      ],
-    },
-    {
-      id: "ue-lookdev",
-      title: "LOOK DEV / UI",
-      category: "engine",
-      year: "2026",
-      layout: "wide",
-      cover: "./pictures/web/5.jpg",
-      subtitle: { zh: "游戏界面与 UE 材质呈现", en: "Game UI & Unreal Material Study" },
-      roles: {
-        zh: ["界面呈现", "场景灯光", "UE 材质"],
-        en: ["UI presentation", "Scene lighting", "Unreal materials"],
-      },
-      description: {
-        zh: "整理角色主菜单、对话画面与 Unreal Engine 材质节点，检查角色在不同界面中的视觉统一性。",
-        en: "Character menu, dialogue presentation and Unreal Engine material-node studies, organized around a consistent in-game visual language.",
-      },
-      images: ["./pictures/web/5.jpg", "./pictures/web/6.jpg", "./pictures/web/ue材质球.jpg"],
-      videos: [],
     },
   ],
 

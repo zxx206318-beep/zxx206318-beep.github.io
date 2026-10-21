@@ -454,6 +454,17 @@
       )
       .join("");
 
+    const caseStudy = (work.caseStudy || [])
+      .map(
+        (section) => `
+          <section class="case-study-card">
+            <h3>${esc(tr(section.label))}</h3>
+            <p>${esc(tr(section.text))}</p>
+          </section>
+        `,
+      )
+      .join("");
+
     $("#projectDialogContent").innerHTML = `
       <header class="dialog-heading">
         <p>${esc(copy(`categories.${work.category}`))} / ${esc(work.year)}</p>
@@ -468,6 +479,7 @@
             .join("")}
         </ul>
       </div>
+      ${caseStudy ? `<div class="case-study-grid">${caseStudy}</div>` : ""}
       <div class="dialog-gallery">
         ${images || (!videos ? `<div class="dialog-empty">${esc(copy("dialog.empty"))}</div>` : "")}
         ${videos}
