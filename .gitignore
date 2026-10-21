@@ -1,0 +1,7 @@
+# Keep source exports local; the deployed site uses optimized web assets.
+/pictures/*.png
+
+# Local tooling and system files
+.DS_Store
+Thumbs.db
+node_modules/
