@@ -141,6 +141,7 @@ window.PORTFOLIO = {
     },
     dialog: {
       close: { zh: "关闭项目详情", en: "Close project details" },
+      playVideo: { zh: "播放视频", en: "Play video" },
       empty: { zh: "项目图片和视频待补充。", en: "Project media coming soon." },
     },
     language: { zh: "切换语言", en: "Switch language" },
@@ -160,7 +161,7 @@ window.PORTFOLIO = {
       year: "2026",
       layout: "wide",
       featured: true,
-      cover: "./pictures/web/5.jpg",
+      cover: "./pictures/web/HighresScreenshot00002.jpg",
       subtitle: {
         zh: "双人骑车合作游戏 / 低多边形视觉",
         en: "Co-op Bike Game / Low-Poly Visuals",
@@ -170,8 +171,8 @@ window.PORTFOLIO = {
         en: ["Art direction", "Character modeling", "Rigging & animation", "Level art", "Materials"],
       },
       description: {
-        zh: "双人合作骑车游戏，以《Jet Set Radio》为视觉灵感，用低面数造型、高饱和色彩与涂鸦式界面还原千禧年前后的复古游戏氛围；整体美术风格由我负责敲定。",
-        en: "A two-player co-op bike game inspired by Jet Set Radio, using low-poly forms, saturated color and graphic UI to evoke early-2000s game culture. I also defined the project's overall art direction.",
+        zh: "双人合作骑车游戏，以《Jet Set Radio》为视觉灵感，用低面数造型、高饱和色彩与涂鸦式视觉语言还原千禧年前后的复古游戏氛围；整体美术风格由我负责敲定。",
+        en: "A two-player co-op bike game inspired by Jet Set Radio, using low-poly forms, saturated colors and a graphic visual language to evoke early-2000s game culture. I also defined the project's overall art direction.",
       },
       caseStudy: [
         {
@@ -204,8 +205,6 @@ window.PORTFOLIO = {
         },
       ],
       images: [
-        "./pictures/web/5.jpg",
-        "./pictures/web/6.jpg",
         "./pictures/web/4.jpg",
         "./pictures/web/1.jpg",
         "./pictures/web/2.jpg",
@@ -222,10 +221,26 @@ window.PORTFOLIO = {
         "./pictures/previews/binding-02.gif",
       ],
       videos: [
-        { src: "./pictures/绑定+动画.mp4", label: { zh: "角色绑定与动画测试 01", en: "Character Rig & Animation Test 01" } },
-        { src: "./pictures/绑定+动画2.mp4", label: { zh: "角色绑定与动画测试 02", en: "Character Rig & Animation Test 02" } },
-        { src: "./pictures/游戏画面.mp4", label: { zh: "街区骑行实机片段", en: "City Bike Gameplay" } },
-        { src: "./pictures/level2.mp4", label: { zh: "室内关卡实机片段", en: "Interior Level Gameplay" } },
+        {
+          src: "./pictures/绑定+动画.mp4",
+          poster: "./pictures/previews/binding-01.gif",
+          label: { zh: "角色绑定与动画测试 01", en: "Character Rig & Animation Test 01" },
+        },
+        {
+          src: "./pictures/绑定+动画2.mp4",
+          poster: "./pictures/previews/binding-02.gif",
+          label: { zh: "角色绑定与动画测试 02", en: "Character Rig & Animation Test 02" },
+        },
+        {
+          src: "./pictures/游戏画面.mp4",
+          poster: "./pictures/web/HighresScreenshot00002.jpg",
+          label: { zh: "街区骑行实机片段", en: "City Bike Gameplay" },
+        },
+        {
+          src: "./pictures/level2.mp4",
+          poster: "./pictures/web/HighresScreenshot00004.jpg",
+          label: { zh: "室内关卡实机片段", en: "Interior Level Gameplay" },
+        },
       ],
     },
     {
@@ -294,7 +309,11 @@ window.PORTFOLIO = {
         "./pictures/previews/surreal-room.gif",
       ],
       videos: [
-        { src: "./pictures/003_ntsc_1.mp4", label: { zh: "超现实场景循环动画", en: "Surreal Scene Loop Animation" } },
+        {
+          src: "./pictures/003_ntsc_1.mp4",
+          poster: "./pictures/previews/surreal-room.gif",
+          label: { zh: "超现实场景循环动画", en: "Surreal Scene Loop Animation" },
+        },
       ],
     },
   ],

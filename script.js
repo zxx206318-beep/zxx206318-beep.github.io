@@ -422,6 +422,20 @@
 
   const dialog = $("#projectDialog");
 
+  $("#projectDialogContent").addEventListener("click", (event) => {
+    const preview = event.target.closest("[data-video-src]");
+    if (!preview) return;
+
+    const video = document.createElement("video");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.src = preview.dataset.videoSrc;
+    video.poster = preview.dataset.videoPoster;
+    preview.replaceWith(video);
+    video.play().catch(() => {});
+  });
+
   function openProject(id) {
     const work = data.works.find((item) => item.id === id);
     if (!work) return;
@@ -441,13 +455,17 @@
       .map(
         (video) => `
           <figure class="dialog-media video-media">
-            <video
-              controls
-              playsinline
-              preload="none"
-              src="${esc(video.src)}"
-              poster="${esc(work.cover)}"
-            ></video>
+            <button
+              class="video-preview"
+              type="button"
+              data-video-src="${esc(video.src)}"
+              data-video-poster="${esc(video.poster || work.cover)}"
+              aria-label="${esc(`${copy("dialog.playVideo")}: ${tr(video.label)}`)}"
+            >
+              <img src="${esc(video.poster || work.cover)}" alt="" loading="lazy" />
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-preview-label">${esc(tr(video.label))}</span>
+            </button>
             <figcaption>${esc(tr(video.label))}</figcaption>
           </figure>
         `,
